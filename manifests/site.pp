@@ -4,7 +4,7 @@ node default {
   content => "Welcome to ${fqdn}\n",
   }
 }
-node puppet.local {
+node 'puppet.local' {
   include role::master
   file {'/etc/secret_password.txt':
     ensure => file,
